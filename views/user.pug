@@ -1,0 +1,13 @@
+doctype html
+html
+	head
+		title Hello
+		link(rel="stylesheet", type="text/css", href="/static/style.css")
+	body
+		div.container
+			if(user)
+				h1.user-name Hello, #{user.firstName} #{user.lastName}
+				h3.user-age You are #{user.age} years old
+				img.user-image(src=user.selfie)
+			else 
+				a.welcome-btn(href="/auth/google") Log in!
